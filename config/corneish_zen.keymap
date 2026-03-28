@@ -36,6 +36,29 @@
         };
     };
 
+    macros {
+        thu_mail: mail {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp Z &kp H &kp E &kp N &kp G &kp L &kp Y &kp N2 &kp N1 &kp AT &kp M &kp A &kp I &kp L &kp S &kp DOT &kp T &kp S &kp I &kp N &kp G &kp H &kp U &kp A &kp DOT &kp E &kp D &kp U &kp DOT &kp C &kp N>;
+            label = "MAIL";
+        };
+
+        qq_mail: mail {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp N1 &kp N8 &kp N0 &kp N8 &kp N3 &kp N4 &kp N0 &kp N6 &kp N7 &kp AT &kp Q &kp Q &kp DOT &kp C &kp O &kp M>;
+            label = "MAIL";
+        };
+
+        zhanglab_U4078: zhanglab_U4078 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp Z &kp H &kp A &kp N &kp G &kp L &kp A &kp B &kp UNDER &kp LS(U) &kp N4 &kp MINUS &kp N0 &kp N7 &kp N8>;
+            label = "ZHANGLAB_U4078";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
