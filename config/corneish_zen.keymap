@@ -21,11 +21,18 @@
 
 / {
     behaviors {
-        td0: td0 {
+        shift1tap_2tap_ctr_alt: shift1tap_2tap_ctr_alt {
             compatible = "zmk,behavior-tap-dance";
-            label = "TD0";
+            label = "SHIFT1TAP_2TAP_CTR_ALT";
             #binding-cells = <0>;
-            bindings = <&kp LSHFT>, <&none>;
+            bindings = <&kp LSHFT>, <&kp LA(LCTRL)>;
+        };
+
+        Ctrl1Tap_Alt2Tap: Ctrl1Tap_Alt2Tap {
+            compatible = "zmk,behavior-tap-dance";
+            label = "CTRL1TAP_ALT2TAP";
+            #binding-cells = <0>;
+            bindings = <&kp LCTRL>, <&kp LEFT_ALT>;
         };
     };
 
@@ -42,10 +49,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp ESC         &kp Q  &kp W  &kp E      &kp R        &kp T             &kp Y           &kp U          &kp I      &kp O    &kp P     &kp BSPC
-&lt 3 CAPS      &kp A  &kp S  &kp D      &kp F        &kp G             &kp H           &kp J          &kp K      &kp L    &kp SEMI  &kp ENTER
-&kp LEFT_SHIFT  &kp Z  &kp X  &kp C      &kp V        &kp B             &kp N           &kp M          &kp COMMA  &kp DOT  &kp FSLH  &mo 6
-                              &kp LCTRL  &lt 7 SPACE  &lt 4 LEFT_ALT    &lt 4 LEFT_GUI  &kp BACKSPACE  &mo 2
+&kp ESC                  &kp Q  &kp W  &kp E              &kp R        &kp T             &kp Y           &kp U          &kp I      &kp O    &kp P     &kp BSPC
+&lt 3 CAPS               &kp A  &kp S  &kp D              &kp F        &kp G             &kp H           &kp J          &kp K      &kp L    &kp SEMI  &kp ENTER
+&shift1tap_2tap_ctr_alt  &kp Z  &kp X  &kp C              &kp V        &kp B             &kp N           &kp M          &kp COMMA  &kp DOT  &kp FSLH  &mo 6
+                                       &Ctrl1Tap_Alt2Tap  &lt 7 SPACE  &lt 4 LEFT_ALT    &lt 4 LEFT_GUI  &kp BACKSPACE  &mo 2
             >;
         };
 
@@ -59,10 +66,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&out OUT_TOG       &bt BT_SEL 0     &bt BT_SEL 1    &bt BT_SEL 3  &kp N4  &kp N5             &kp N6           &kp N7           &kp N8           &kp N9           &kp N0    &bt BT_CLR
-&trans             &td0             &td0            &td0          &td0    &td0               &kp LEFT         &kp DOWN         &kp UP           &kp RIGHT        &kp HOME  &kp PG_UP
-&ext_power EP_TOG  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &trans        &trans  &rgb_ug RGB_EFF    &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp END   &kp PG_DN
-                                                    &trans        &trans  &trans             &kp INS          &kp DEL          &trans
+&out OUT_TOG       &bt BT_SEL 0             &bt BT_SEL 1             &bt BT_SEL 3             &kp N4                   &kp N5                     &kp N6           &kp N7           &kp N8           &kp N9           &kp N0    &bt BT_CLR
+&trans             &shift1tap_2tap_ctr_alt  &shift1tap_2tap_ctr_alt  &shift1tap_2tap_ctr_alt  &shift1tap_2tap_ctr_alt  &shift1tap_2tap_ctr_alt    &kp LEFT         &kp DOWN         &kp UP           &kp RIGHT        &kp HOME  &kp PG_UP
+&ext_power EP_TOG  &rgb_ug RGB_OFF          &rgb_ug RGB_ON           &trans                   &trans                   &rgb_ug RGB_EFF            &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp END   &kp PG_DN
+                                                                     &trans                   &trans                   &trans                     &kp INS          &kp DEL          &trans
             >;
         };
 
