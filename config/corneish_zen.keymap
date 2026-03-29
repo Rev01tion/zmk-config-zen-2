@@ -96,10 +96,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&out OUT_TOG       &bt BT_SEL 0             &bt BT_SEL 1             &bt BT_SEL 3             &kp N4                   &kp N5                     &kp N6           &kp N7           &kp N8           &kp N9           &kp N0    &bt BT_CLR
-&trans             &shift1tap_2tap_ctr_alt  &shift1tap_2tap_ctr_alt  &shift1tap_2tap_ctr_alt  &shift1tap_2tap_ctr_alt  &shift1tap_2tap_ctr_alt    &kp LEFT         &kp DOWN         &kp UP           &kp RIGHT        &kp HOME  &kp PG_UP
-&ext_power EP_TOG  &rgb_ug RGB_OFF          &rgb_ug RGB_ON           &trans                   &trans                   &rgb_ug RGB_EFF            &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp END   &kp PG_DN
-                                                                     &trans                   &trans                   &trans                     &kp INS          &kp DEL          &trans
+&out OUT_TOG      &bt BT_SEL 0             &bt BT_SEL 1             &bt BT_SEL 3             &kp N4                   &kp N5                     &kp N6           &kp N7           &kp N8           &kp N9           &kp N0    &bt BT_CLR
+&trans            &shift1tap_2tap_ctr_alt  &shift1tap_2tap_ctr_alt  &shift1tap_2tap_ctr_alt  &shift1tap_2tap_ctr_alt  &shift1tap_2tap_ctr_alt    &kp LEFT         &kp DOWN         &kp UP           &kp RIGHT        &kp HOME  &kp PG_UP
+&ext_power EP_ON  &rgb_ug RGB_OFF          &rgb_ug RGB_ON           &trans                   &trans                   &rgb_ug RGB_EFF            &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp END   &ext_power EP_OFF
+                                                                    &trans                   &trans                   &trans                     &kp INS          &kp DEL          &trans
             >;
         };
 
