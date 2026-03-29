@@ -39,7 +39,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "ALT_LAYER";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_ALT>, <&mo 6>;
+            bindings = <&kp LEFT_ALT>, <&mo 2>;
         };
     };
 
@@ -63,6 +63,15 @@
             #binding-cells = <0>;
             bindings = <&none &kp Z &kp H &kp A &kp N &kp G &kp L &kp A &kp B &kp UNDER &kp LS(U) &kp N4 &kp MINUS &kp N0 &kp N7 &kp N8>;
             label = "ZHANGLAB_U4078";
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        Alt_TAB {
+            bindings = <&kp LA(TAB)>;
+            key-positions = <12 38>;
         };
     };
 
