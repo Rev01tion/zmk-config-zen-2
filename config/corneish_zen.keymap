@@ -65,12 +65,7 @@
             label = "QQ_mail";
         };
 
-        zhanglab_U4078: zhanglab_U4078 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&none &kp Z &kp H &kp A &kp N &kp G &kp L &kp A &kp B &kp UNDER &kp LS(U) &kp N4 &kp MINUS &kp N0 &kp N7 &kp N8>;
-            label = "ZHANGLAB_U4078";
-        };
+
     };
 
     combos { compatible = "zmk,combos"; };
